@@ -1,10 +1,9 @@
 const express = require('express');
-// const path = require('path');
+
+const projectController = require('../controllers/projects');
 
 const router = express.Router();
 
-router.get('/projects', async (req, res) => {
-    res.render('projects', {pageTitle: 'Our Projects'});
-});
+router.get('/projects', projectController.getProjects);
 
 module.exports = router;

@@ -1,10 +1,9 @@
 const express = require('express');
-// const path = require('path');
+
+const aboutController = require('../controllers/about');
 
 const router = express.Router();
 
-router.get('/about', async (req, res) => {
-    res.render('about', {pageTitle: 'About us'});
-});
+router.get('/about', aboutController.getAbout);
 
 module.exports = router;
